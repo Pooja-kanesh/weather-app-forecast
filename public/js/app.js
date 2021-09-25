@@ -1,6 +1,5 @@
 'use strict'
 
-
 //---------Home Page---------
 const weatherForm = document.querySelector('form');
 const searchAddress = document.querySelector('input');
