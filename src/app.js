@@ -10,7 +10,7 @@ const weather_type = require('./utils/weather-type');
 // const { randomInt } = require('crypto');
 
 const app = express();                      // generates express application
-
+const port = process.env.PORT || 3000
 
 //Defines path for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -138,7 +138,7 @@ app.get('*', (req, res) => {
 // '' for app.com
 // '/help' for app.com/help
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server started..')
 })
 
