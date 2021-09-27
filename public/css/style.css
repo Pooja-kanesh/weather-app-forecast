@@ -115,11 +115,10 @@ button{
     display: none;
 }
 
-
-
 @media screen and (max-width: 700px){
     body{
         max-width: 600px;
+
     }
     .main-content{
         text-align: center;
@@ -131,7 +130,7 @@ button{
     }
 
     h1{
-        font-size: 54px;
+        font-size: px;
         margin-left: 0;
         margin-bottom: 10px;
     }

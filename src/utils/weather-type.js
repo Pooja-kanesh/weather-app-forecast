@@ -1,7 +1,7 @@
 const w_type = function (descrip) {
     const d = descrip.toLowerCase();
 
-    if (d === 'windy' || d.index('sunny') > -1 || d === 'cloudy'
+    if (d === 'windy' || d.indexOf('sunny') > -1 || d === 'cloudy'
         || d === 'overcast') {
         return d;
     }
@@ -28,6 +28,10 @@ const w_type = function (descrip) {
 
     else if (d === 'haze' || d === 'smoke' || d === 'mist') {
         return 'haze';
+    }
+
+    else if (d.indexOf('snow') > -1) {
+        return 'snowfall';
     }
 
 }
