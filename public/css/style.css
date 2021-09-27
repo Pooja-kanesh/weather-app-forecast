@@ -91,12 +91,9 @@ button{
 .forecast{
     display:flex;
     flex-direction: column;
+    text-align: center;
     margin-left: 35%;
     margin-right: 25%;
-}
-
-.forecast p{
-    margin-top: 18px;
 }
 
 .inner{
@@ -118,41 +115,24 @@ button{
     display: none;
 }
 
-.err{
-    background-image: none;
-    background-color: whitesmoke;
-}
 
-h2{
-    margin-left: 12px;
-    font-size: 54px;
-    color: rgb(35, 35, 35);
-    max-width: 18%;
-    border-bottom: 4px solid rgb(35, 35, 35);
-}
 
-.err a{
-    margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-@media only screen and (max-width: 700px){
+@media screen and (max-width: 700px){
     body{
         max-width: 600px;
     }
-
     .main-content{
         text-align: center;
     }
 
     header{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     h1{
         font-size: 54px;
+        margin-left: 0;
         margin-bottom: 10px;
     }
 
@@ -161,6 +141,7 @@ h2{
     }
     p{
         font-size: 18px;
+        margin-left: 0;
     }
     .message{
         padding: 18px 0;
@@ -183,6 +164,9 @@ h2{
     }
     input{
         margin-left: 3%;
+    }
+    .w-icon, .temp{
+        max-width: 36px;
     }
 }
 

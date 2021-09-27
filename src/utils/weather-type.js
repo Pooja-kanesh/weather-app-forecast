@@ -1,7 +1,7 @@
 const w_type = function (descrip) {
     const d = descrip.toLowerCase();
 
-    if (d === 'windy' || d === 'sunny' || d === 'cloudy'
+    if (d === 'windy' || d.index('sunny') > -1 || d === 'cloudy'
         || d === 'overcast') {
         return d;
     }

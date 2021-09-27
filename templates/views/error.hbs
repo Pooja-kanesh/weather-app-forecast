@@ -5,16 +5,24 @@
 <head>
     <title>Error</title>
     <link rel="icon" href="/img/app-icon.png">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/error-style.css">
 </head>
 
-<body class="err">
+<body>
     <div class="main-content">
-        <h2>Error 404</h2>
-        <p>{{message}}</p>
-        <p>You might visit these links:</p>
-        <a href='/'>Home</a>
-        <a href='/help'>Help</a>
+        <div class="heading">
+            <img src="../img/error.png" class="error-image" />
+            <h2>Error 404</h2>
+        </div>
+
+        <div class="info-content">
+            <p class="message">{{message}}</p>
+            <p>You might visit these links:</p>
+            <ul>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/help'>Help</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 
