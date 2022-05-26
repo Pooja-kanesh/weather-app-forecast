@@ -31,30 +31,24 @@ app.get('', (req, res) => {
         creator: 'Pooja Kanesh',
     })
 })
-// app.get('', (req, res) => {
-//     res.send('<h1>WEATHER</h1>')
-// })
 
+/*
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About',
+        title: 'Forecaster | about',
         creator: 'Pooja Kanesh'
     })
 })
-// app.get('/about', (req, res) => {
-//     res.send('About page')
-// })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help',
+        title: 'Forecaster | help',
         creator: 'Pooja Kanesh',
         message: 'Enter location to know weather'
     })
 })
-// app.get('/help', (req, res) => {
-//     res.send('This is help page')
-// })
+
+*/
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
@@ -85,8 +79,6 @@ app.get('/weather', (req, res) => {
                 })
                 // console.log(data)
                 // console.log(data.location)
-                // const weather = weatherData.current
-                // console.log(`${weather.weather_descriptions[0]}. \nIt is currently ${weather.temperature} degrees and ${weather.precip}% chance of raining.`)
             })
         }
     })
@@ -97,26 +89,6 @@ app.get('/weather', (req, res) => {
     //     temperature: '22'
     // })
 })
-
-
-// app.get('/more', (req, res) => {
-//     news((error, response) => {
-//         if (error) {
-//             res.send(error)
-//         }
-//         else {
-//             res.send(response)
-//         }
-//     })
-// })
-
-
-// app.get('/products', (req, res) => {
-//     console.log(req.query)
-//     res.send({
-//         products: []
-//     })
-// })
 
 app.get('/help/*', (req, res) => {
     res.render('error', {

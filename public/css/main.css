@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(rgb(162, 186, 240), whitesmoke);
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    margin: 0;
+    font-size: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: rgb(59, 59, 59);
+}
+
+.main-content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 10%;
+    padding: 1rem;
+}
+
+/* HEADER-STYLES */
+header {
+    box-shadow: 1px 1px 10px 1px rgb(135, 160, 169);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* border-bottom: 1px solid rgb(166, 166, 166); */
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    color: #5d7682;
+}
+
+header h1 {
+    padding-left: 0.5em;
+}
+
+/* 
+ul {
+    list-style-type: none;
+    font-size: 0.85rem;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(0, 128, 255);
+    border: 1px solid rgb(0, 128, 255);
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 0.25em 1em;
+}
+
+li :hover {
+    color: aliceblue;
+    background-color: rgba(0, 128, 255, 0.499);
+} 
+*/
+
+/* FOOTER-STYLES */
+footer {
+    padding: 0 1em;
+    font-size: smaller;
+    color: #5d76828b;
+}

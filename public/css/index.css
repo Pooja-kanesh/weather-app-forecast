@@ -1,0 +1,49 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+.sub-content {
+    max-width: 40rem;
+    min-width: 20rem;
+    margin-top: 5em;
+    padding-top: 1em;
+    padding-left: 1em;
+    /* border: 1px solid blue; */
+    box-shadow: 1px 1px 10px 1px rgb(135, 160, 169);
+}
+
+.inner {
+    font-family: 'Noto Sans', sans-serif;
+    color: rgba(13, 13, 13, 0.928);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 1em;
+}
+
+input,
+button {
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 1em;
+    padding: 0.25em 0.75em;
+    font-size: 1rem;
+    border: 1px solid aliceblue;
+}
+
+input {
+    margin: 0 0.5em;
+}
+
+.main-content p,
+.w-icon {
+    padding: 0.5em;
+    /* border: 1px solid black; */
+}
+
+.temp {
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+.hidden {
+    display: none;
+}

@@ -6,34 +6,31 @@
     <title>Forecaster</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/img/app-icon.png">
-    <link rel="stylesheet" href="/css/style.css">
-
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
+    {{> header}}
     <div class="main-content">
-        {{> header}}
+        <p class="message">Get local weather of any location!</p>
 
-        <p class="message">Get weather information for any location!</p>
         <form>
             <input type="text" placeholder="Enter location" />
             <button>search</button>
         </form>
 
-        <div class="forecast">
+        <div class="sub-content hidden">
             <div class="inner">
-                <img src="/img/sunny.png" alt="weather icon" class="w-icon hidden">
-                <p class="result" id="one">dummy text dummy text </p>
-
-            </div>
-            <div class="inner">
-                <h5 class="temp hidden">23°C</h5>
-                <p class="result" id="two">dummy text dummy text dummy text </p>
+                <p class="temp hidden"></p>
+                <p class="info place"></p>
+                <p><img src="/img/sunny.png" alt="weather icon" class="w-icon hidden"></p>
+                <p class="info forecast"></p>
             </div>
         </div>
+
     </div>
     {{> footer}}
-
     <script src="/js/app.js"></script>
 </body>
 

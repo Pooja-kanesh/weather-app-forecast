@@ -3,8 +3,10 @@
 //---------Home Page---------
 const weatherForm = document.querySelector('form');
 const searchAddress = document.querySelector('input');
-const paraOne = document.getElementById('one')
-const paraTwo = document.getElementById('two')
+const contentBox = document.querySelector('.sub-content')
+
+const place = document.querySelector('.place')
+const info = document.querySelector('.forecast')
 const weatherIcon = document.querySelector('.w-icon')
 const temperature = document.querySelector('.temp')
 
@@ -16,16 +18,19 @@ weatherForm.addEventListener('submit', (e) => {
 
     weatherIcon.classList.add('hidden')
     temperature.classList.add('hidden')
+    contentBox.classList.remove('hidden')
     temperature.textContent = ''
-    paraOne.textContent = 'Loading information! Please wait......'
-    paraTwo.textContent = ''
+    place.textContent = 'Loading...'
+    info.textContent = ''
     searchAddress.blur();
 
     fetch(`/weather?address=${address}`).then((response) => {
         response.json().then((data) => {
 
             if (data.error) {
-                paraOne.textContent = data.error
+                weatherIcon.classList.remove('hidden')
+                weatherIcon.src = `../img/search.png`
+                place.textContent = data.error
             }
             else {
                 searchAddress.value = ''
@@ -33,8 +38,9 @@ weatherForm.addEventListener('submit', (e) => {
                 weatherIcon.classList.remove('hidden')
                 temperature.classList.remove('hidden')
                 temperature.textContent = `${data.temperature}°C`
-                paraOne.textContent = data.location
-                paraTwo.textContent = data.forecast
+
+                place.textContent = data.location
+                info.textContent = data.forecast
             }
         })
     })
